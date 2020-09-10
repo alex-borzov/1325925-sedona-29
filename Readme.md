@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Александр Борзов](https://up.htmlacademy.ru/htmlcss/29/user/1325925).
-* Наставник: `Неизвестно`.
+* Наставник: [Максим Прусаков](https://htmlacademy.ru/profile/hikikomori).
 
 ---
 
