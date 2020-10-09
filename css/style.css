@@ -176,6 +176,16 @@ img {
   background-color: var(--sky-blue);
 }
 
+.social-button:hover,
+.social-button:focus {
+  background-color: var(--blue);
+}
+
+.social-button:active {
+  background-color: var(--extra-blue);
+  color: var(--transparent-text);
+}
+
 
 /* Main hotels */
 
