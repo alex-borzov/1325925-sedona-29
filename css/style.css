@@ -42,6 +42,21 @@ img {
   height: auto;
 }
 
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin:-1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* Grid */
 
 .page {
@@ -275,7 +290,8 @@ img {
 .page-footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-
+  justify-items: center;
+  align-items: center;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
@@ -313,28 +329,55 @@ img {
 
 /* forms */
 .forms {
+  width: 1200px;
+  background-image: url("../img/background-hotel.jpg");
   background-color: var(--canyon);
+
 }
 
 /* sort */
 
 .sort {
+  display: grid;
+  grid-template-columns: auto auto auto 1fr;
+  align-items: center;
   background-color: var(--basic-white);
 }
 
-.found,
-.presents-hotels-link {
+.found {
+  grid-column: 1 / 2;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
   color: var(--basic-black);
 }
 
-.sort-result,
-.sort-result-list {
+.sort-result {
+  grid-column: 2 / 3;
   font-size: 12px;
   line-height: 18px;
   list-style: none;
+}
+
+.sort-result-list {
+  grid-column: 3 / 4;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: 12px;
+  line-height: 18px;
+  list-style: none;
+}
+
+.price {
+  grid-column: 1 / 2;
+}
+
+.type {
+  grid-column: 2 / 3;
+}
+
+.on-rating {
+  grid-column: 3 / 4;
 }
 
 .sort-result-link {
@@ -356,6 +399,11 @@ img {
   color: var(--sky-blue);
 }
 
+.sort-button-wrapper {
+  grid-column: 4 / 5;
+  justify-self: end;
+}
+
 /* Presents hotels */
 
 .presents-hotels {
@@ -364,6 +412,37 @@ img {
 
 .presents-hotels-list {
   list-style: none;
+}
+
+.presents-hotels-item {
+  display: grid;
+  grid-template-columns: auto auto auto 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "pic title title star-pic"
+    "pic hotel-text hotel-text star-pic"
+    "pic detailed booking rating";
+}
+
+.hotel-title {
+  grid-area: title;
+}
+
+.hotel-pic {
+  grid-area: pic;
+  align-self: center;
+  justify-self: center;
+}
+
+.hotel-text {
+  grid-area: hotel-text;
+}
+
+.presents-hotels-link {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: var(--basic-black);
 }
 
 .presents-hotels-link:hover,
@@ -377,6 +456,8 @@ img {
 }
 
 .hotel-detailed {
+  grid-area: detailed;
+  align-self: center;
   font-weight: bold;
   background-color: var(--sky-blue);
   color: var(--basic-white);
@@ -393,6 +474,8 @@ img {
 }
 
 .hotel-booking{
+  grid-area: booking;
+  align-self: center;
   font-weight: bold;
   background-color: var(--light-bronze);
   color: var(--basic-white);
@@ -408,7 +491,15 @@ img {
   color: var(--transparent-text);
 }
 
+.star-pic {
+  grid-area: star-pic;
+  justify-self: end;
+}
+
 .rating {
+  grid-area: rating;
+  justify-self: end;
+  align-self: center;
   background-color: var(--basic-light-gray);
   color: var(--dark-gray);
 }

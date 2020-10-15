@@ -11,74 +11,81 @@
 
 <body class="page-body">
   <header class="main-header">
-    <nav class="main-navigation">
-      <a class="main-header-logo" href="index.html">
-        <img src="img/logo.svg" width="138" height="70" alt="Логотип туристического сайта города Седона">
-      </a>
-      <ul class="site-navigation">
-        <li><a class="site-navigation-link" href="#">Информация</a></li>
-        <li><a class="site-navigation-link" href="#">Фото и видео</a></li>
-        <li><a class="site-navigation-link" href="#">Карта штата</a></li>
-        <li><a class="site-navigation-link selected" href="#">Гостиницы</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <nav class="main-navigation">
+        <a class="main-header-logo" href="index.html">
+          <img src="img/logo.svg" width="138" height="70" alt="Логотип туристического сайта города Седона">
+        </a>
+        <ul class="site-navigation">
+          <li><a class="site-navigation-link" href="#">Информация</a></li>
+          <li><a class="site-navigation-link" href="#">Фото и видео</a></li>
+          <li><a class="site-navigation-link" href="#">Карта штата</a></li>
+          <li><a class="site-navigation-link selected" href="#">Гостиницы</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main class="container">
-    <h1>Большой выбор гостиниц на любой вкус</h1>
+  <main class="container main-content">
+    <h1 class="visually-hidden">Большой выбор гостиниц на любой вкус</h1>
     <section class="forms">
-      <h2>Фильтр гостиниц</h2>
+      <h2 class="visually-hidden">Фильтр гостиниц</h2>
       <form action=""></form>
     </section>
     <section class="sort">
-      <h2>Результаты поиска</h2>
+      <h2 class="visually-hidden">Результаты поиска</h2>
       <p class="found">Найдено 3:</p>
       <p class="sort-result">Сортировка:</p>
       <ul class="sort-result-list">
-        <li><a class="sort-result-link active" href="#">по цене</a></li>
-        <li><a class="sort-result-link" href="#">по типу</a></li>
-        <li><a class="sort-result-link" href="#">по рейтингу</a></li>
+        <li class="price"><a class="sort-result-link active" href="#">по цене</a></li>
+        <li class="type"><a class="sort-result-link" href="#">по типу</a></li>
+        <li class="on-rating"><a class="sort-result-link" href="#">по рейтингу</a></li>
       </ul>
-      <button class="sort-result-button"></button>
-      <button class="sort-result-button"></button>
+      <div class="sort-button-wrapper">
+        <button class="sort-button"></button>
+        <button class="sort-button"></button>
+      </div>
     </section>
     <section class="presents-hotels">
-      <h2>Отели</h2>
+      <h2 class="visually-hidden">Отели</h2>
       <ul class="presents-hotels-list">
-        <li>
-          <h3><a class="presents-hotels-link" href="#">Amara Resort & Spa</a></h3>
-          <img src="img/amara.jpg" width="135" height="90"
+        <li class="presents-hotels-item">
+          <h3 class="hotel-title"><a class="presents-hotels-link" href="#">Amara Resort & Spa</a></h3>
+          <img class="hotel-pic" src="img/amara.jpg" width="135" height="90"
             alt="Общий вид гостиницы &quot;Amara Resort & Spa на фоне скалы&quot;">
-          <p>Гостиница<span> от 4000 Р.</span></p>
+          <p class="hotel-text">Гостиница<span> от 4000 Р.</span></p>
           <a class="hotel-detailed" href="">Подробнее</a>
           <a class="hotel-booking" href="">Забронировать</a>
-          <img src="img/star.svg" width="18" height="17" alt="">
+          <img class="star-pic" src="img/star.svg" width="18" height="17" alt="">
           <span class="rating">Рейтинг:8,5</span>
         </li>
-        <li>
-          <h3><a class="presents-hotels-link" href="#">Desert Quail Inn</a></h3>
-          <img src="img/desert.jpg" width="135" height="90" alt="Фасад мотеля &quot;Desert Quail Inn с фонтаном&quot;">
-          <p>Мотель<span> от 3000 Р.</span></p>
+        <li class="presents-hotels-item">
+          <h3 class="hotel-title"><a class="presents-hotels-link" href="#">Desert Quail Inn</a></h3>
+          <img class="hotel-pic" src="img/desert.jpg" width="135" height="90"
+            alt="Фасад мотеля &quot;Desert Quail Inn с фонтаном&quot;">
+          <p class="hotel-text">Мотель<span> от 3000 Р.</span></p>
           <a class="hotel-detailed" href="">Подробнее</a>
           <a class="hotel-booking" href="">Забронировать</a>
-          <img src="img/star.svg" width="18" height="17" alt="">
+          <img class="star-pic" src="img/star.svg" width="18" height="17" alt="">
           <span class="rating">Рейтинг:8,9</span>
         </li>
-        <li>
-          <h3><a class="presents-hotels-link" href="#">Villas At Poco Diablo</a></h3>
-          <img src="img/villas.jpg" width="135" height="90"
+        <li class="presents-hotels-item">
+          <h3 class="hotel-title"><a class="presents-hotels-link" href="#">Villas At Poco Diablo</a></h3>
+          <img class="hotel-pic" src="img/villas.jpg" width="135" height="90"
             alt="Лужайка перед фасадом апартаментов &quot;Villas At Poco Diablo&quot;">
-          <p>Апартаменты<span> от 2000 Р.</span></p>
+          <p class="hotel-text">Апартаменты<span> от 2000 Р.</span></p>
           <a class="hotel-detailed" href="">Подробнее</a>
           <a class="hotel-booking" href="">Забронировать</a>
-          <img src="img/star.svg" width="18" height="17" alt="">
+          <img class="star-pic" src="img/star.svg" width="18" height="17" alt="">
           <span class="rating">Рейтинг:9,2</span>
         </li>
       </ul>
     </section>
   </main>
-  <footer class="page-footer hotel-footer">
-    <p>#visitsedona</p>
-    <p>тел:<a>+7(495) 666-01-66</a></p>
+  <footer class="page-footer hotel-footer container">
+    <div class="footer-contacs">
+      <p>#visitsedona</p>
+      <p>тел:<a>+7(495) 666-01-66</a></p>
+    </div>
     <ul class="footer-list">
       <li><a class="social-button" href="#"><img src="img/twitter.svg" width="17" height="15" alt="Логотип Твиттер"></a>
       </li>
