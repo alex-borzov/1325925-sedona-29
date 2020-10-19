@@ -345,9 +345,9 @@ input[type="radio"].visually-hidden {
 
 /* Main footer */
 
-.main-footer {
+/* .main-footer {
   margin-top: -120px;
-}
+} */
 
 .page-footer {
   display: grid;
@@ -373,6 +373,12 @@ input[type="radio"].visually-hidden {
 }
 
 .social-button {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 6px;
+  width: 46px;
+  height: 46px;
   background-color: var(--sky-blue);
 }
 
@@ -383,9 +389,37 @@ input[type="radio"].visually-hidden {
 
 .social-button:active {
   background-color: var(--extra-blue);
-  color: var(--transparent-text);
 }
 
+.social-button svg {
+  fill: var(--basic-white);
+}
+
+.social-button:active svg {
+  fill: var(--transparent-text)
+}
+
+.developer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: normal;
+  color: var(--basic-black);
+}
+
+.developer a {
+  padding-left: 8px;
+}
+
+.developer svg:hover path {
+  fill: var(--sky-blue);
+}
+
+.developer svg:active path {
+  fill: #bdbbbc;
+}
 
 /* Main hotels */
 
@@ -400,14 +434,16 @@ input[type="radio"].visually-hidden {
 /* sort */
 
 .sort {
-  display: grid;
+  /* display: grid;
   grid-template-columns: auto auto auto 1fr;
+  align-items: center; */
+  display: flex;
   align-items: center;
   background-color: var(--basic-white);
 }
 
 .found {
-  grid-column: 1 / 2;
+  /* grid-column: 1 / 2; */
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
@@ -415,22 +451,24 @@ input[type="radio"].visually-hidden {
 }
 
 .sort-result {
-  grid-column: 2 / 3;
+  /* grid-column: 2 / 3; */
   font-size: 12px;
   line-height: 18px;
   list-style: none;
 }
 
 .sort-result-list {
-  grid-column: 3 / 4;
+  /* grid-column: 3 / 4;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr; */
+  display: flex;
+  justify-content: space-around;
   font-size: 12px;
   line-height: 18px;
   list-style: none;
 }
 
-.price {
+/* .price {
   grid-column: 1 / 2;
 }
 
@@ -440,7 +478,7 @@ input[type="radio"].visually-hidden {
 
 .on-rating {
   grid-column: 3 / 4;
-}
+} */
 
 .sort-result-link {
   color: var(--basic-black);
@@ -462,8 +500,9 @@ input[type="radio"].visually-hidden {
 }
 
 .sort-button-wrapper {
-  grid-column: 4 / 5;
-  justify-self: end;
+  /* grid-column: 4 / 5; */
+  /* justify-self: end; */
+  margin-left: auto;
 }
 
 /* Presents hotels */
