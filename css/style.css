@@ -89,14 +89,36 @@ input[type="radio"].visually-hidden {
 }
 
 .site-navigation {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  justify-items: center; */
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: flex-start;
   margin: 0;
-  padding: 15px 72px;
+  padding-top: 0;
+  padding-left: 72px;
+  padding-right: 72px;
+  padding-bottom: 16px;
   list-style: none;
+}
+
+.site-navigation li{
+  padding-top: 14px;
+}
+
+.site-navigation li:nth-child(1){
+   margin-right: 135px;
+}
+
+.site-navigation li:nth-child(2){
+  margin-right: 418px;
+}
+
+.site-navigation li:nth-child(3){
+  margin-right: 147px;
+}
+
+.site-navigation li:nth-child(n+5){
+  padding-top: 32px;
 }
 
 .site-navigation-link{
@@ -131,17 +153,19 @@ input[type="radio"].visually-hidden {
 /* Slogan */
 
 .slogan {
-  display: grid;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  width: 1200px;
   background-color: var(--canyon);
   background-image: url("../img/intro-mask.svg"), url("../img/background-photo.jpg");
   background-repeat: no-repeat;
-  background-position: bottom, top;
+  background-position: bottom, bottom;
 }
 
 .slogan-pic {
   padding-top: 76px;
-  padding-bottom: 80px;
+  padding-bottom: 81px;
 }
 
 /* Main-title */
@@ -159,18 +183,20 @@ input[type="radio"].visually-hidden {
   background-color: var(--basic-white);
 }
 
-/* .wrapper-main-title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
 
 /* Advantages */
+
+.advantages {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 
 .advantages-main-title {
   display: flex;
   justify-content: center;
-  padding: 51px 0;
+  padding-top: 4px;
+  padding-bottom: 52px;
   margin: 0;
   font-size: 14px;
   line-height: 26px;
@@ -189,65 +215,6 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
 
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: avto 1fr 1fr;
-}
-
-.first-advantage {
-  grid-column: 1 / -1;
-  grid-row: 1 / 2;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto 1fr;
-}
-
-.first-blue-block {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-}
-
-.village {
-  grid-column: 2 / 4;
-  grid-row: 1 / 2;
-}
-
-.real-town {
-  grid-column: 1 / -1;
-  grid-row: 2 / 3;
- }
-
- .real-town-list {
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
- }
-
-.second-advantage {
-  grid-column: 1 / -1;
-  grid-row: 2 / 3;
-
-  display: grid;
-  grid-template-columns: 1fr auto;
-}
-
-.bridge {
-  order: -1;
-}
-
-.third-advantage {
-  grid-column: 1 / 2;
-  grid-row: 3 / 4;
-}
-
-.fourth-advantage {
-  grid-column: 2 / 3;
-  grid-row: 3 / 4;
-}
-
-.fifth-advantage {
-  grid-column: 3 / 4;
-  grid-row: 3 /4;*/
 }
 
 .advantages-item {
@@ -345,9 +312,15 @@ input[type="radio"].visually-hidden {
 
 /* Main footer */
 
-/* .main-footer {
-  margin-top: -120px;
-} */
+.footer-wrapper{
+  position: relative;
+}
+
+.main-footer {
+  position: absolute;
+  bottom: 0;
+  left: 40px;
+}
 
 .page-footer {
   display: grid;
@@ -434,16 +407,12 @@ input[type="radio"].visually-hidden {
 /* sort */
 
 .sort {
-  /* display: grid;
-  grid-template-columns: auto auto auto 1fr;
-  align-items: center; */
   display: flex;
   align-items: center;
   background-color: var(--basic-white);
 }
 
 .found {
-  /* grid-column: 1 / 2; */
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
@@ -451,34 +420,18 @@ input[type="radio"].visually-hidden {
 }
 
 .sort-result {
-  /* grid-column: 2 / 3; */
   font-size: 12px;
   line-height: 18px;
   list-style: none;
 }
 
 .sort-result-list {
-  /* grid-column: 3 / 4;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; */
   display: flex;
   justify-content: space-around;
   font-size: 12px;
   line-height: 18px;
   list-style: none;
 }
-
-/* .price {
-  grid-column: 1 / 2;
-}
-
-.type {
-  grid-column: 2 / 3;
-}
-
-.on-rating {
-  grid-column: 3 / 4;
-} */
 
 .sort-result-link {
   color: var(--basic-black);
@@ -500,9 +453,7 @@ input[type="radio"].visually-hidden {
 }
 
 .sort-button-wrapper {
-  /* grid-column: 4 / 5; */
-  /* justify-self: end; */
-  margin-left: auto;
+   margin-left: auto;
 }
 
 /* Presents hotels */
