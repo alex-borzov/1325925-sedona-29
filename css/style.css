@@ -89,9 +89,9 @@ input[type="radio"].visually-hidden {
 }
 
 .site-navigation {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 229px 516px auto auto;
+  justify-items: flex-start;
   align-items: flex-start;
   margin: 0;
   padding-top: 0;
@@ -105,20 +105,8 @@ input[type="radio"].visually-hidden {
   padding-top: 14px;
 }
 
-.site-navigation li:nth-child(1){
-   margin-right: 135px;
-}
-
-.site-navigation li:nth-child(2){
-  margin-right: 418px;
-}
-
-.site-navigation li:nth-child(3){
-  margin-right: 147px;
-}
-
-.site-navigation li:nth-child(n+5){
-  padding-top: 32px;
+.site-navigation li:nth-child(4n) {
+  justify-self: flex-end;
 }
 
 .site-navigation-link{
@@ -226,6 +214,8 @@ input[type="radio"].visually-hidden {
 
 .advantages-title,
 .real-town-title {
+  width: 151px;
+  text-align: center;
   margin: 0;
   font-size: 21px;
   font-weight: bold;
@@ -312,15 +302,7 @@ input[type="radio"].visually-hidden {
 
 /* Main footer */
 
-.footer-wrapper{
-  position: relative;
-}
 
-.main-footer {
-  position: absolute;
-  bottom: 0;
-  left: 40px;
-}
 
 .page-footer {
   display: grid;
