@@ -27,10 +27,10 @@
   </header>
   <main class="container main-content">
     <h1 class="visually-hidden">Большой выбор гостиниц на любой вкус</h1>
-    <section class="forms">
+    <section class="hotels-form">
       <h2 class="visually-hidden">Фильтр гостиниц</h2>
-      <form class="hotel-filter" action="https://echo.htmlacademy.ru" method="get">
-        <fieldset>
+      <form class="hotels-filter" action="https://echo.htmlacademy.ru" method="get">
+        <fieldset class="filter-item">
           <legend>Инфраструктура:</legend>
           <ul>
             <li>
@@ -47,7 +47,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset>
+        <fieldset class="filter-item">
           <legend>Тип жилья:</legend>
           <ul>
             <li>
@@ -64,16 +64,27 @@
             </li>
           </ul>
         </fieldset>
-
-        <label for="filter-cost">Стоимость в сутки(Р):</label>
-        <table>
-          <tr>
-            <td>от 0</td>
-            <td>до 3000</td>
-          </tr>
-        </table>
-        <input id="filter-cost" type="range" min="0" max="3000" name="cost">
-        <button type="submit">Показать</button>
+        <fieldset class="filter-item range">
+          <legend>Стоимость в сутки(Р):</legend>
+          <div class="range-filter">
+            <div class="price-controls">
+              <label class="min-price">
+                от <input type="number" name="min-price" value="0">
+              </label>
+              <label class="max-price">
+                до <input type="number" name="max-price" value="3000">
+              </label>
+            </div>
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="toggle toggle-min"></div>
+              <div class="toggle toggli-max"></div>
+            </div>
+          </div>
+          <button type="button">Показать</button>
+        </fieldset>
       </form>
     </section>
     <section class="sort">
@@ -86,8 +97,8 @@
         <li class="on-rating"><a class="sort-result-link" href="#">по рейтингу</a></li>
       </ul>
       <div class="sort-button-wrapper">
-        <button class="sort-button"></button>
-        <button class="sort-button"></button>
+        <button class="sort-button" type="button"></button>
+        <button class="sort-button" type="button"></button>
       </div>
     </section>
     <section class="presents-hotels">
@@ -126,7 +137,7 @@
       </ul>
     </section>
   </main>
-  <footer class="page-footer hotel-footer container">
+  <footer class="page-footer hotel-footer">
     <div class="footer-contacts">
       <p class="hashtag">#visitsedona</p>
       <p class="footer-tel">тел:<a href="tel:+74956660166"> +7(495) 666-01-66</a></p>
